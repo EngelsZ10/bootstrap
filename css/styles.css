@@ -18,7 +18,7 @@
 .jumbotron{
     padding: 70px 30px 70px 30px;
     margin: 0px auto;
-    border: 6px groove;
+    border-bottom: 6px groove;
     background-color: #D6ED17FF;
     color: #606060FF;
 }
@@ -29,3 +29,7 @@
     color: #001d22;
 }
 
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
