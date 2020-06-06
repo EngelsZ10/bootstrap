@@ -23,7 +23,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand ml-auto" href="#"><img src="./img/logo.png" height="30" width="41"></a>
+            <a class="navbar-brand ml-auto order-last order-sm-first" href="#"><img src="./img/logo.png" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
@@ -32,17 +32,20 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>    
             </div>
+            <a class="btn btn-primary order-sm-last col-5 col-sm-3 col-lg-2 ml-auto" href="#Card">Reserve Table</a>
         </div>
     </nav>
 
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-9 col-lg-10">
+                <div class="col-12 col-sm-9 col-lg-10 order-sm-last">
                     <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. <br>
+                     Our lipsmacking creations will tickle your culinary senses!
+                    </p>
                 </div>
-                <div class="col-12 col-sm-3 col-lg-2 align-self-center">
+                <div class=" col-sm-3 col-lg-2 align-self-center order-sm-first">
                     <img class="img-fluid" src="./img/logo.png">
                 </div>
             </div>
@@ -54,11 +57,11 @@
             <div class="col-12 col-sm-4 col-md-3 order-md-last">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
-            <div class="col col-sm col-md order-md-fist">
+            <div class="col col-sm col-md order-md-first">
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">  
                     <div class="media-body">
-                        <h2 class="mt-0">Uthappizza</h2>
+                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
                         <p class="d-none d-sm-block">
                             A unique combination of Indian Uthappam (pancake) and
                             Italian pizza, topped with Cerignola olives, ripe vine
@@ -76,8 +79,18 @@
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">
+                            Featuring mouthwatering combinations with a choice of five 
+                            different salads, six enticing appetizers, six main entrees 
+                            and five choicest desserts. Free flowing bubbly and soft drinks. 
+                            All for just $19.99 per person
+                        </p>
+                    </div>
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Buffet">  
+                </div>
             </div>
         </div>
 
@@ -94,6 +107,53 @@
                         <p class="d-none d-sm-block">
                             Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center" id="Card">
+            <div class=" offset-sm-2 col-12 col-sm-8">
+                <div class="card">
+                    <h2 class="card-header bg-primary text-white col-auto">Reserve a Table</h2>
+                    <div class="card-body">
+                        <form >
+                            <div class="form-group row">
+                                <label for="radiocheck" class="col-form-label col-12 col-sm-4">Number of Guests</label>
+                                <div id="radiocheck" class="col-12 col-sm-8">
+                                    <div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="RadioO" id="RadioO1" value="option1">
+                                        <label class="from-check-label" for="RadioO1">1</label>    
+                                    </div>
+                                    <div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="RadioO" id="RadioO2" value="option2">
+                                        <label class="from-check-label" for="RadioO2">2</label>    
+                                    </div>
+                                    <div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="RadioO" id="RadioO3" value="option3">
+                                        <label class="from-check-label" for="RadioO3">3</label>    
+                                    </div>
+                                    <div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="RadioO" id="RadioO4" value="option4">
+                                        <label class="from-check-label" for="RadioO4">4</label>    
+                                    </div>
+                                    <div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="RadioO" id="RadioO5" value="option5">
+                                        <label class="from-check-label" for="RadioO5">5</label>    
+                                    </div>
+                                    <div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="RadioO" id="RadioO6" value="option6">
+                                        <label class="from-check-label" for="RadioO6">6</label>    
+                                    </div>
+                                </div>
+                            <div class="form-group row m-1">
+                                <label for="dateNtime" class="col-form-label col-12 col-sm-4 mr-auto">Date and Time</label>
+                                <div id="dateNtime" class="row col-12 col-sm-8">
+                                    <input type="text" class="form-control col-6 col-sm-4" id="date" name="date" placeholder="Date">
+                                    <input type="text" class="form-control col-6 col-sm-4" id="time" name="time" placeholder="Time">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
