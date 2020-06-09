@@ -40,3 +40,18 @@ body{
     border-right: 1px solid #ddd;
     padding: 10px;
 }
+
+.carousel {
+    background: #df790d;
+}
+
+.carousel-item {
+    height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    min-height: 300px;
+}

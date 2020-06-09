@@ -18,12 +18,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm bg-warning fixed-top shadow">
+    <nav class="navbar navbar-dark navbar-expand-md bg-warning fixed-top shadow">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand ml-auto order-last order-sm-first" href="#"><img src="./img/logo.png" height="30" width="41"></a>
+            <a class="navbar-brand order-last order-sm-first" href="#"><img src="./img/logo.png" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
@@ -32,9 +32,49 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>    
             </div>
-            <a class="btn btn-primary order-sm-last col-5 col-sm-3 col-lg-2 ml-auto" href="#Card">Reserve Table</a>
+            
+            <span class="navbar-text">
+                <a data-toggle="modal" data-target="#modallog">
+                    <span class="fa fa-sign-in"></span> <strong> Login</strong>
+                </a>
+            </span>
         </div>
     </nav>
+
+    <div id="modallog" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group col-6">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                            </div>
+                            <div class="form-group col-12">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="approve" id="approve">
+                                    <label class="form-check-label" for="approve"><strong> Remeber Me</strong></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button class="btn btn-secondary ml-auto mr-2" type="button" data-dismiss="modal"> cancel</button>
+                            <button class="btn btn-primary mr-auto" type="submit"> Sign In</button>    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -45,14 +85,75 @@
                      Our lipsmacking creations will tickle your culinary senses!
                     </p>
                 </div>
-                <div class=" col-sm-3 col-lg-2 align-self-center order-sm-first">
+                
+                <div class="row col-sm-3 col-lg-2 align-self-center order-sm-first">
                     <img class="img-fluid" src="./img/logo.png">
+                    <a role="button" class="btn btn-block btn-primary"
+                    data-toggle="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
+                    data-placement="bottom" href="#Card">
+                        Reserve Table
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
+    
+
     <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <div class="carousel slide" id="MyCarousel" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
+                            <div class="carousel-caption d-none d-sm-block">
+                                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
+                                <p class="d-none d-sm-block">
+                                    A unique combination of Indian Uthappam (pancake) and
+                                    Italian pizza, topped with Cerignola olives, ripe vine
+                                    cherry tomatoes, Vidalia onion, Guntur chillies and
+                                    Buffalo Paneer.
+                                </p>
+                            </div>    
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/buffet.png" alt="Buffet">   
+                            <div class="carousel-caption d-none d-sm-block">
+                                <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                                <p class="d-none d-sm-block">
+                                    Featuring mouthwatering combinations with a choice of five 
+                                    different salads, six enticing appetizers, six main entrees 
+                                    and five choicest desserts. Free flowing bubbly and soft drinks. 
+                                    All for just $19.99 per person
+                                </p>
+                            </div> 
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/alberto.png" alt="Alberto">
+                            <div class="carousel-caption d-none d-sm-block">
+                                <h2 class="mt-0">Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p class="d-none d-sm-block">
+                                    Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li class="active" data-target="#MyCarousel" data-slide-to="0"></li>
+                        <li data-target="#MyCarousel" data-slide-to="1"></li>
+                        <li data-target="#MyCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#MyCarousel" data-slide="prev" role="button">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#MyCarousel" data-slide="next" role="button">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3 order-md-last">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -205,8 +306,12 @@
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 </body>
 
