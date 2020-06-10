@@ -55,3 +55,10 @@ body{
     bottom: 0px;
     min-height: 300px;
 }
+
+#carouselBtn {
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
