@@ -54,6 +54,15 @@ body{
     padding: 10px;
 }
 
+.modal {
+    .modal-header{
+        background: $background-dark;
+    }
+    .modal-body{
+        background: $background-pale;
+    }
+}
+
 .carousel {
     background:$background-dark;
 

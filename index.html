@@ -34,7 +34,7 @@
             </div>
             
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#modallog">
+                <a id="modallogBtn">
                     <span class="fa fa-sign-in"></span> <strong> Login</strong>
                 </a>
             </span>
@@ -162,8 +162,7 @@
                 
                 <div class="row col-sm-3 col-lg-2 align-self-center order-sm-first">
                     <img class="img-fluid" src="./img/logo.png">
-                    <a role="button" class="btn btn-block btn-primary text-white" data-toggle="modal" data-target="#ModalRe"
-                    rel="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
+                    <a id="ModalReBtn" role="button" class="btn btn-block btn-primary text-white" rel="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
                     data-placement="bottom">
                         Reserve Table
                     </a>
@@ -348,7 +347,8 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    <script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+    <script>
         $(document).ready(function(){
             $('[rel="tooltip"]').tooltip();
             if (!$('#ModalRe').is(':visible')) {
@@ -362,6 +362,14 @@
             });
 
             $("#MyCarousel").carousel({interval: 1002});
+            
+            $('#modallogBtn').click(function(){
+                $('#modallog').modal("show")
+            });
+
+            $('#ModalReBtn').click(function(){
+                $('#ModalRe').modal("show")
+            });
 
             $('#carouselBtn').click(function(){
                 if($("#carouselBtn").children('span').hasClass("fa-pause")){
